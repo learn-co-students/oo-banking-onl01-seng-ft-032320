@@ -54,6 +54,7 @@ describe 'Transfer' do
 
     it "can execute a successful transaction between two accounts" do
       transfer.execute_transaction
+      # binding.pry
       expect(amanda.balance).to eq(950)
       expect(avi.balance).to eq(1050)
       expect(transfer.status).to eq("complete")
